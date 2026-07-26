@@ -11,7 +11,7 @@ python3 cifar100_train.py -a resnet32 --dataset cifar100 --loss_type DEBS  --epo
 
 ### To train DBDPMNet on ImageNet-LT:
 ```bash
-python3 imagenet_train.py -a resnet50 --dataset Imagenet-LT --loss_type DEBS  --epochs 200 --num_classes 45 --workers 15 --print_freq 50 -b 120 --mixup_prob 1  --start_data_aug 0 --end_data_aug 20 --lr 0.1 --weighted_alpha 1   --exp dbdpmnet_imagenet_lt
+python3 imagenet_train.py -a resnet50 --dataset Imagenet-LT --loss_type DEBS  --epochs 200 --num_classes 1000 --workers 15 --print_freq 50 -b 120 --mixup_prob 1  --start_data_aug 0 --end_data_aug 20 --lr 0.1 --weighted_alpha 1   --exp dbdpmnet_imagenet_lt
 ```
 ### To train DBDPMNet on NWPU-RESISC45-LT:
 ```bash
