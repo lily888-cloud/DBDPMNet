@@ -199,9 +199,9 @@ def main_worker(gpu, ngpus_per_node, args):
             transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
 
-    train_dataset = LT_Dataset(args.root, '/home/lhl/stp-ht/data/ImageNet_LT/train.txt', transform_train,
+    train_dataset = LT_Dataset(args.root, '/data/ImageNet_LT/train.txt', transform_train,
                                use_randaug=args.use_randaug)
-    val_dataset = LT_Dataset(args.root, '/home/lhl/stp-ht/data/ImageNet_LT/test.txt', transform_val)
+    val_dataset = LT_Dataset(args.root, '/data/ImageNet_LT/test.txt', transform_val)
 
     num_classes = len(np.unique(train_dataset.targets))
     assert num_classes == 1000
