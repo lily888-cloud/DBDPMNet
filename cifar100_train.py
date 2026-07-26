@@ -184,9 +184,9 @@ def main_worker(gpu, ngpus_per_node, args):
         ])
 
     # 加载CIFAR100-LT的标签文件（根据实际路径调整）
-    train_dataset = LT_Dataset(args.root, '/home/lhl/stp-ht/data/cifar/cifar100-lt-r200/train.txt', transform_train,  # 改为CIFAR100-LT的train.txt
+    train_dataset = LT_Dataset(args.root, '/data/cifar/cifar100-lt-r100/train.txt', transform_train,  # 改为CIFAR100-LT的train.txt
                                use_randaug=args.use_randaug)
-    val_dataset = LT_Dataset(args.root, '/home/lhl/stp-ht/data/cifar/cifar100-lt-r200/test.txt', transform_val)  # 改为CIFAR100-LT的test.txt
+    val_dataset = LT_Dataset(args.root, '/data/cifar/cifar100-lt-r100/test.txt', transform_val)  # 改为CIFAR100-LT的test.txt
 
      
     num_classes = len(np.unique(train_dataset.targets))
