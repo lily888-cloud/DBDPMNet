@@ -22,7 +22,7 @@ python3 cifar100_train.py \
     --lr 0.1 \
     --weighted_alpha 1 \
     --exp_str dbdpmnet_cifar100_lt
-```markdown
+```
 
 ### To train DBDPMNet on CIFAR100-LT:
 ```bash
